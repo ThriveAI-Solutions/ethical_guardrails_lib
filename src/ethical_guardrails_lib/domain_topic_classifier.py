@@ -1,5 +1,7 @@
 import re
 from rapidfuzz import fuzz
+from nltk.stem import PorterStemmer
+from nltk.tokenize import word_tokenize
 
 # Domain keywords organized for clarity and scalability
 
@@ -250,13 +252,6 @@ SEXISM_KEYWORDS = {
         "simp", "soy boy", "weak men", "emasculated", "effeminate", "crybaby", "sissy"
     }
 }
-
-import yaml
-import re
-from pathlib import Path
-from rapidfuzz import fuzz
-from nltk.stem import PorterStemmer
-from nltk.tokenize import word_tokenize
 
 # Load and prepare keyword lists
 def load_keywords(file_path):

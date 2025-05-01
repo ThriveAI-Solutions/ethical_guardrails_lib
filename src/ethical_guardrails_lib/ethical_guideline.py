@@ -1,5 +1,4 @@
-import pandas as pd
-import domain_topic_classifier as dtc
+import ethical_guardrails_lib.domain_topic_classifier as dtc
 
 brand_name = "ThriveAI"
 
@@ -138,6 +137,3 @@ def get_sample_questions():
 
         
     
-
-
-

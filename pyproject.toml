@@ -1,16 +1,19 @@
 [project]
-name = "ethical_guardrails_lib"
+name = "ethical-guardrails-lib"
 version = "0.1.0"
-description = "This solution includes a set of Ethical Guardrails designed to detect and prevent inappropriate, biased, or harmful outputs from AI systems."
+description = "Add your description here"
 readme = "README.md"
 authors = [
-    { name = "Joseph Eberle", email = "josepheberle@outlook.com" }
+    { name = "Kyle Root", email = "kyle@wellconnected.co" }
 ]
-requires-python = ">=3.13"
-dependencies = []
+requires-python = ">=3.12"
+dependencies = [
+    "nltk>=3.9.1",
+    "rapidfuzz>=3.13.0",
+]
 
 [project.scripts]
-python-library-test = "ethical_guardrails_lib:main"
+ethical-guardrails-lib = "ethical_guardrails_lib:main"
 
 [build-system]
 requires = ["hatchling"]
