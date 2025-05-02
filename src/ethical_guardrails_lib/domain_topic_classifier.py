@@ -52,7 +52,7 @@ DOMAIN_KEYWORDS = {
         "prevalence", "pandemic", "epidemic", "at risk", "population", "comorbidity", "morbidity",
 
         # metabolic
-        "fat", "skinny", "over weight", "under weight", "starving", "hyperglycemic", "diabetic", "obese", "condition"       
+        "fat", "skinny", "over weight", "under weight", "starving", "hyperglycemic", "diabetic", "obese", "condition",       
 
         # medical terms
         "doctor", "physician", "nurse", "practitioner", "appointment", "visit", "checkup", "referral", "triage",
@@ -62,14 +62,26 @@ DOMAIN_KEYWORDS = {
         "diagnosis", "insurance", "copay", "authorization", "exam", "examination", "medical", "conditions", "condition" 
 
         # claim terms   
-        "symptom", "diagnosed", "rash", "painfull" 
+        "symptom", "diagnosed", "rash", "painfull", 
 
         # anatomy 
         "heart", "lungs", "brain", "liver", "kidney", "stomach", "intestine", "colon", "pancreas", "spleen",
         "bladder", "esophagus", "trachea", "bronchi", "diaphragm", "skin", "bone", "muscle", "joint", "spine",
         "rib", "skull", "pelvis", "femur", "tibia", "fibula", "humerus", "ulna", "radius", "knee", "hip", "shoulder",
         "arm", "leg", "hand", "foot", "eye", "ear", "nose", "mouth", "tongue", "teeth", "throat", "neck", "breast", 
-        "thyroid", "prostate", "uterus", "ovary", "testicle", "vein", "artery", "nerve", "lymph node"        
+        "thyroid", "prostate", "uterus", "ovary", "testicle", "vein", "artery", "nerve", "lymph node",        
+
+        # table
+        "wny_health", "health", "wny health", "health_care",  "health care",  "health",  "wny"  ,  "care" , "treatment" , "treat",  
+        
+        # table columns
+       'research_id', 'age', 'sex', 'race_level_1', 'race_level_2',
+       'ethnicity', 'zip_code', 'county', 'adi_state', 'adi_national', 'year',
+       'asthma', 'diabetes', 'diabetes_poor_control', 'diabetes_type',
+       'hba1c_result', 'hypertension', 'bp_control', 'bp_result', 'obesity',
+       'prediabetes', 'pd_type', 'tobacco', 'breast_cancer_screening',
+       'cervical_cancer_screening', 'colorectal_cancer_screening'
+            
 
     },
     
@@ -89,9 +101,6 @@ DOMAIN_KEYWORDS = {
     }
 }
 
-
-
-
 TOPIC_KEYWORDS = {
     "disease": {"cancer", "diabetes", "diabetic", "myocardial", "asthma", "cholesterol", "blood pressure", "illness", "pnuemonia"},
     "chronic disease": {"diabetes", "obesity", "arthritis", "osteoporosis", "chronic pain"},
@@ -100,6 +109,11 @@ TOPIC_KEYWORDS = {
     "respiratory disease ": {"asthma", "copd", "bronchitis"},
     "disease Neurological": {"alzheimers", "parkinsons", "depression", "anxiety", "autism", "epilepsy"},
     "condition": {"pregnancy", "smoking", "addicted", "addict","addicted"},
+    "epidemiology": {"incedence", "prevalence", "rate of disease", "pandemic","epidemic","how many cases"},    
+    "health_columns": {"research_id", "race_level_1", "race_level_2", "ethnicity","adi_state","adi_national"},  
+    "health_columns2": {"asthma", "diabetes", "diabetes_poor_control", "hba1c_result","prediabetes","hypertension"}, 
+    "health_columns3": {"tobacco", "breast_cancer_screening", "colorectal_cancer_screening", "cervical_cancer_screening","prediabetes","sex"},      
+    "health": {"wny_health", "health", "wny health", "health_care",  "health care",  "health",  "wny"  ,  "care" , "treatment" , "treat"},  
     "weight": {"obese", "fat", "skinny", "diet", "weight loss", "overweight","obesity"},
     "medication": {"ozempic", "wegovy", "aspirin", "viagra", "opioid", "statin", "antidepressant", "antibiotics", "acetaminophen", "ibuprofen", "painkiller",
     "metformin", "lisinopril", "amoxicillin", "atorvastatin", "simvastatin", "omeprazole", "pantoprazole", "levothyroxine", "methadone",
@@ -128,6 +142,7 @@ TOPIC_KEYWORDS = {
     "colonoscopy", "endoscopy", "biopsy", "cataract surgery", "bypass surgery", "angioplasty", "stent placement",
     "mastectomy", "lumpectomy", "cesarean section", "hysterectomy", "cholecystectomy", "dialysis",
     "laparoscopy", "mri", "ct scan", "xray", "ultrasound", "mammogram", "vaccination", "injection",
+    "prevalence", "incidence",                
     "blood transfusion", "intubation", "ventilation", "physical therapy"},
     "penguin": {"flipper", "beak", "gentoo", "penguins", "feathers", "colony", "antarctica", "huddle"},
     "titanic": {"passenger", "ticket class", "survived", "died", "titanic", "iceberg", "lifeboat", "drown", "ship", "deck"}   
@@ -252,6 +267,8 @@ SEXISM_KEYWORDS = {
         "simp", "soy boy", "weak men", "emasculated", "effeminate", "crybaby", "sissy"
     }
 }
+
+
 
 # Load and prepare keyword lists
 def load_keywords(file_path):
