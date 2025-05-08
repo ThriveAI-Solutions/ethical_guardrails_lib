@@ -4,8 +4,7 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 import nltk
 
-if not nltk.data.find('tokenizers/punkt'):
-    nltk.download('punkt_tab')
+nltk.download('punkt_tab')
 
 # Domain keywords organized for clarity and scalability
 
