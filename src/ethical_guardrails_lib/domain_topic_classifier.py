@@ -16,7 +16,7 @@ DOMAIN_KEYWORDS = {
         "dr", "practice", "therapy", "scan", "lab", "biopsy", "epidemic", "pandemic", "fever", "rash", "cough",
         "sepsis", "infection", "pneumonia", "screening", "checkup", "overweight", "obese", "weight", "diet", "exercise",
         "walking", "sleep", "sleeping", "lonely", "sadness", "anxiety", "depression", "addiction", "substance abuse",
-        "allergies",
+        "allergies", "penicillin", "allergy", "allergic", "penecillin",
 
         # Diseases & conditions
         "cancer", "tumor", "diabetes", "glucose", "a1c", "obesity", "arthritis", "osteoporosis", "chronic pain",
